@@ -45,11 +45,11 @@
 
     /* Theme Toggle Switch */
     .theme-toggle {
-      width: 44px;
-      height: 22px;
-      border-radius: 11px;
-      background: linear-gradient(135deg, var(--navy), var(--blue));
-      border: none;
+      width: 46px;
+      height: 24px;
+      border-radius: 12px;
+      background: #fde047; /* Default light theme background */
+      border: 1px solid #f59e0b;
       position: relative;
       cursor: pointer;
       padding: 0;
@@ -57,24 +57,29 @@
       align-items: center;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
       outline: none;
+      transition: all 0.3s ease;
     }
 
     .toggle-dot {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
-      background: #ffffff;
+      background: #f97316; /* Default light theme sun dot */
       position: absolute;
-      left: 3px;
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      left: 2px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 1px 4px rgba(249, 115, 22, 0.5);
     }
 
-    html[data-theme="light"] .toggle-dot {
-      transform: translateX(0);
+    html[data-theme="dark"] .theme-toggle {
+      background: #1e1b4b !important; /* Dark theme background */
+      border-color: rgba(255, 255, 255, 0.25);
     }
-    
+
     html[data-theme="dark"] .toggle-dot {
-      transform: translateX(22px);
+      transform: translateX(24px) !important;
+      background: #e2e8f0 !important; /* Dark theme moon dot */
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     }
 
     html[data-theme="dark"] .navbar {
@@ -107,6 +112,16 @@
     html[data-theme="dark"] body {
       background-color: var(--off-white);
       color: #f4f6ff;
+    }
+    html[data-theme="dark"] h1,
+    html[data-theme="dark"] h2,
+    html[data-theme="dark"] h3,
+    html[data-theme="dark"] h4,
+    html[data-theme="dark"] h5,
+    html[data-theme="dark"] h6,
+    html[data-theme="dark"] .font-display,
+    html[data-theme="dark"] .section-title {
+      color: #f4f6ff !important;
     }
 
     * {
