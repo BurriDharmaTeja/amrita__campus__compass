@@ -1631,10 +1631,10 @@ body {
    ---------------------------------------------------- */
 .inside-campus-section {
   padding: 8rem 2rem;
-  background: var(--bg-dark);
-  color: var(--text-light);
-  border-top: 1px solid var(--glass-border);
-  border-bottom: 1px solid var(--glass-border);
+  background: #fdfdfd;
+  color: #1e293b;
+  border-top: 1px solid rgba(168, 28, 45, 0.15);
+  border-bottom: 1px solid rgba(168, 28, 45, 0.15);
   position: relative;
 }
 
@@ -1661,7 +1661,7 @@ body {
 
 .inside-campus-subtitle {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #5a5d7c;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -1675,11 +1675,11 @@ body {
 }
 
 .inside-card {
-  background: var(--bg-card);
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--glass-shadow);
-  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 30px rgba(168, 28, 45, 0.06);
+  border: 1px solid rgba(168, 28, 45, 0.15);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -1689,8 +1689,8 @@ body {
 
 .inside-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(168, 28, 45, 0.12);
-  border-color: var(--glass-border-glow);
+  box-shadow: 0 12px 30px rgba(168, 28, 45, 0.15);
+  border-color: rgba(168, 28, 45, 0.35);
 }
 
 .inside-card-img {
@@ -1730,7 +1730,7 @@ body {
 
 .inside-card-content p {
   font-size: 0.92rem;
-  color: var(--text-muted);
+  color: #5a5d7c;
   line-height: 1.6;
   margin: 0;
 }
