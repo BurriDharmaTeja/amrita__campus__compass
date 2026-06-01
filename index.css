@@ -838,6 +838,14 @@ body {
    ---------------------------------------------------- */
 
 @media (max-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-item {
+    font-size: 0.85rem;
+  }
+
   .slide-title {
     font-size: 3.2rem;
   }
