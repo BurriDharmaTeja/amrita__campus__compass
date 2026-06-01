@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central Library | Amrita Amaravati</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Loader Overlay -->
+  <div class="loader-overlay" id="loader">
+    <div class="loader"></div>
+    <div class="loader-text">Opening Library Doors...</div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.jpg" alt="Amrita Vishwa Vidyapeetham" class="logo-img">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="academic.html" class="nav-item">Academic Life</a>
+        <a href="clubs.html" class="nav-item">Clubs & Activities</a>
+        <a href="campus.html" class="nav-item">Campus Life</a>
+        <a href="survival.html" class="nav-item">Survival Kit</a>
+        <a href="resources.html" class="nav-item">Resources</a>
+      </nav>
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <span class="toggle-dot"></span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Menu">
+          <svg class="hamburger-icon" viewBox="0 0 24 24" width="24" height="24">
+            <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="logo-link">
+        <img src="assets/logo.jpg" alt="Amrita Vishwa Vidyapeetham" class="logo-img">
+      </div>
+      <button class="close-btn" id="mobile-close" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-item">Home</a>
+      <a href="academic.html" class="drawer-item">Academic Life</a>
+      <a href="clubs.html" class="drawer-item">Clubs & Activities</a>
+      <a href="campus.html" class="drawer-item">Campus Life</a>
+      <a href="survival.html" class="drawer-item">Survival Kit</a>
+      <a href="resources.html" class="drawer-item">Resources</a>
+    </nav>
+  </div>
+
+  <!-- Parallax Subpage Hero -->
+  <section class="subpage-hero" style="background-image: linear-gradient(rgba(10, 10, 12, 0.6), rgba(10, 10, 12, 0.9)), url('assets/slide3.jpg');">
+    <div class="subpage-hero-content">
+      <span class="subpage-tag">KNOWLEDGE HUB</span>
+      <h1 class="subpage-title">Central Library</h1>
+      <p class="subpage-subtitle">Home / Amaravati</p>
+    </div>
+  </section>
+
+  <!-- Library Content -->
+  <main class="subpage-content">
+    <div class="subpage-container">
+      
+      <!-- About Library Layout (Split) -->
+      <section class="about-library-section">
+        <div class="library-split-grid">
+          <div class="library-image-panel">
+            <img src="assets/slide3.jpg" alt="Central Atrium & Library Reading Scene" class="library-main-img">
+          </div>
+          <div class="library-text-panel">
+            <h2 class="library-section-title">About Library</h2>
+            <p class="library-text">
+              The Amrita Vishwa Vidyapeetham’s Amaravati campus library, which inaugurated to the public in 2022, acts as a knowledge resource centre by containing hybrid resources. It is a Knowledge Resource Centre and supports the teaching and learning activities of all the Students, Research Scholars, Faculty Members and all other staff members in this campus. 
+            </p>
+            <p class="library-text">
+              The library includes Prescribed Textbooks, Reference books, Print Journals, Electronic books, Electronic journals, Technical magazines, General magazines, Dailies, CD’s & DVD’s, Course materials and Faculty publications etc., It follows the Universal Decimal Classification (UDC) Scheme for arrangement of books.
+            </p>
+            <p class="library-text">
+              The Library is automated with <strong>KOHA</strong>, an integrated Library Management Software with advanced search options. This Integrated Library Management System offers fastest, easiest, most efficient way to track, locate, transaction and manage library materials. The OPAC (Online Public Access Catalogue) provides easy access to the database of books, journals, project reports and electronic resources. Users can search all materials in the library collection, including books on engineering and management, reference books, gratis books, periodicals, CD/DVD details, etc., using the OPAC (Online Public Access Catalogue).
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Return Button -->
+      <div class="action-footer">
+        <a href="index.html" class="btn btn-primary">← Return to Homepage</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 Campus Compass • Designed for Freshers at Amrita Amaravati. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

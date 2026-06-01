@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Compass 2026 | Ultimate Fresher Guide - Amrita Amaravati</title>
+  <meta name="description"
+    content="Welcome to Campus Compass 2026, the ultimate fresher guide for B.Tech students at Amrita Vishwa Vidyapeetham, Amaravati. Explore academic life, clubs, survival tips, and resources.">
+
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Loading Overlay -->
+  <div class="loader-overlay" id="loader">
+    <div class="loader"></div>
+    <div class="loader-text">Navigating Amrita Campus...</div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo-link">
+        <img src="assets/logo.jpg" alt="Amrita Vishwa Vidyapeetham" class="logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item active" id="nav-home">Home</a>
+        <a href="academic.html" class="nav-item" id="nav-academic">Academic Life</a>
+        <a href="clubs.html" class="nav-item" id="nav-clubs">Clubs & Activities</a>
+        <a href="campus.html" class="nav-item" id="nav-campus">Campus Life</a>
+        <a href="survival.html" class="nav-item" id="nav-survival">Survival Kit</a>
+        <a href="resources.html" class="nav-item" id="nav-resources">Resources</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <div class="nav-right">
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Menu">
+          <svg class="hamburger-icon" viewBox="0 0 24 24" width="24" height="24">
+            <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Menu Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="logo-link">
+        <img src="assets/logo.jpg" alt="Amrita Vishwa Vidyapeetham" class="logo-img">
+      </div>
+      <button class="close-btn" id="mobile-close" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-item active">Home</a>
+      <a href="academic.html" class="drawer-item">Academic Life</a>
+      <a href="clubs.html" class="drawer-item">Clubs & Activities</a>
+      <a href="campus.html" class="drawer-item">Campus Life</a>
+      <a href="survival.html" class="drawer-item">Survival Kit</a>
+      <a href="resources.html" class="drawer-item">Resources</a>
+    </nav>
+  </div>
+
+  <!-- Hero Image Slider Section -->
+  <section class="hero-slider" id="hero">
+    <div class="slider-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="slide active" data-slide="0">
+        <div class="slide-bg" style="background-image: url('assets/slide1.jpg');"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag animate-fade-in-down">INTERMEDIATE COMPLETED? 🎓</span>
+          <h2 class="slide-subheading animate-fade-in-up">YOUR B.TECH JOURNEY STARTS HERE</h2>
+          <h1 class="slide-title animate-fade-in-up">Welcome future amritian!</h1>
+          <p class="slide-description animate-fade-in-up">The Ultimate Fresher Guide for Amrita Vishwa Vidyapeetham,
+            Amaravati</p>
+          <div class="slide-actions animate-fade-in-up">
+            <a href="#welcome-section" class="btn btn-primary">[ Start Exploring ]</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide" data-slide="1">
+        <div class="slide-bg" style="background-image: url('assets/slide2.jpg');"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Explore a Modern Campus</h1>
+          <p class="slide-description">Innovation • Learning • Growth</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide" data-slide="2">
+        <div class="slide-bg" style="background-image: url('assets/slide3.jpg');"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">A Space Designed For Learning</h1>
+          <div class="text-list">
+            <p class="text-list-item">Collaborate</p>
+            <p class="text-list-item">Create</p>
+            <p class="text-list-item">Discover</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide" data-slide="3">
+        <div class="slide-bg" style="background-image: url('assets/slide4.jpg');"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Where Ideas Become Reality</h1>
+          <p class="slide-description">Modern Classrooms<br>Smart Learning Environment</p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide" data-slide="4">
+        <!-- Remote fallback to ensure beautiful classroom environment is shown -->
+        <div class="slide-bg"
+          style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1920');">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <h1 class="slide-title">Your Journey Starts In The Classroom</h1>
+          <div class="text-list horizontal">
+            <span class="text-badge">Learn</span>
+            <span class="text-badge">Build</span>
+            <span class="text-badge">Innovate</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arrow Controls -->
+    <button class="slider-arrow arrow-prev" id="prev-btn" aria-label="Previous Slide">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <polyline points="15 18 9 12 15 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <button class="slider-arrow arrow-next" id="next-btn" aria-label="Next Slide">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <polyline points="9 18 15 12 9 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <!-- Navigation Dots -->
+    <div class="slider-dots" id="dots-container">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
+
+    <!-- Bouncing Scroll Down Indicator -->
+    <a href="#welcome-section" class="scroll-indicator" id="scroll-indicator" aria-label="Scroll Down">
+      <div class="mouse-icon">
+        <div class="mouse-wheel"></div>
+      </div>
+      <div class="scroll-arrows">
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+    </a>
+  </section>
+
+  <!-- Below-the-fold content for welcome, navigation dashboard, and quotes -->
+  <main class="main-content" id="welcome-section">
+    <div class="content-container">
+
+      <!-- Welcome Message & College Branding Section -->
+      <section class="welcome-branding">
+        <div class="welcome-container">
+          <div class="welcome-badge">Moulding Minds, Inspiring Hearts</div>
+          <h2 class="welcome-heading">About the Campus</h2>
+          <p class="welcome-text">
+            Amrita Vishwa Vidyapeetham is a leading multi-disciplinary and research-intensive university, establishing its campus in Amaravati. Nestled amidst the scenic beauty of the Krishna River and surrounded by natural wonders and historical sites, Amaravati city embodies the principles of sustainability and liveability. We are building one of the most buoyant centre of the research, education and technological advancement, in the all new greenfield capital city.
+          </p>
+          <p class="welcome-text">
+            Our institution boasts a sprawling 100-acre campus adorned with green lawns and thriving trees. Conveniently connected by road, rail, and air, it is easily accessible from the IT and business hubs of Andhra Pradesh and Telangana. Equipped with modern laboratories, design tools, and software packages, our departments prepare graduates with a solution-oriented mindset and strong ethical standards. Our vision is to produce quality engineers dedicated to serving society and the nation.
+          </p>
+          <p class="welcome-text">
+            Amrita Vishwa Vidyapeetham, Amaravati Campus offers diverse programs including Integrated M. Sc. Physics, M. Sc. Physics, M. Sc. Data Science, and MBA. These programs are specifically designed to provide students with a comprehensive education that equips them with necessary skills and knowledge to excel in their prospective careers.
+          </p>
+          
+          <!-- Key Campus Pillars -->
+          <div class="campus-pillars">
+            <div class="pillar">
+              <span class="pillar-stat">100</span>
+              <span class="pillar-label">Acres Sprawling Campus</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar-stat">A++</span>
+              <span class="pillar-label">NAAC Grade Accredited</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar-stat">100%</span>
+              <span class="pillar-label">Value-Based Education</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clean Navigation Section -->
+      <section class="navigation-dashboard">
+        <div class="dashboard-header">
+          <h3 class="dashboard-title">Explore the Onboarding Guide</h3>
+          <p class="dashboard-subtitle">Select any module below to dive deep into campus regulations, locations,
+            resources, and contact listings.</p>
+        </div>
+
+        <!-- Glassmorphic Grid Cards (Clean Navigation Dashboard) -->
+        <div class="guide-grid">
+          
+          <!-- Academic Life Card -->
+          <a href="academic.html" class="glass-card card-img-style shadow-hover" id="academic">
+            <div class="card-top-image" style="background-image: url('assets/slide4.jpg');"></div>
+            <div class="card-bottom-content">
+              <h3>Academic Life</h3>
+            </div>
+          </a>
+
+          <!-- Clubs & Extracurriculars Card -->
+          <a href="clubs.html" class="glass-card card-img-style shadow-hover" id="clubs">
+            <div class="card-top-image" style="background-image: url('assets/clubs_extra.jpg');"></div>
+            <div class="card-bottom-content">
+              <h3>Clubs & Extracurriculars</h3>
+            </div>
+          </a>
+
+          <!-- Campus & Hostel Life Card -->
+          <a href="campus.html" class="glass-card card-img-style shadow-hover" id="campus">
+            <div class="card-top-image" style="background-image: url('assets/campus_hostel.jpg');"></div>
+            <div class="card-bottom-content">
+              <h3>Campus & Hostel Life</h3>
+            </div>
+          </a>
+
+          <!-- Survival Kit Card -->
+          <a href="survival.html" class="glass-card card-img-style shadow-hover" id="survival">
+            <div class="card-top-image" style="background-image: url('assets/survival_kit.jpg');"></div>
+            <div class="card-bottom-content">
+              <h3>Survival Kit</h3>
+            </div>
+          </a>
+
+          <!-- Must-Have Tools Card -->
+          <a href="resources.html" class="glass-card card-img-style shadow-hover" id="resources">
+            <div class="card-top-image" style="background-image: url('assets/tools_resources.jpg');"></div>
+            <div class="card-bottom-content">
+              <h3>Must-Have Tools & Resources</h3>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Inside the Campus Section (Breakout Light Theme) -->
+      <section class="inside-campus-section" id="inside-campus">
+        <div class="inside-campus-header">
+          <div class="inside-campus-accent"></div>
+          <h3 class="inside-campus-title">Inside the Campus</h3>
+          <p class="inside-campus-subtitle">Kick start your career by involving our various entities.</p>
+        </div>
+
+        <div class="inside-campus-grid">
+          
+          <!-- Admission Card -->
+          <a href="https://www.amrita.edu/admissions/" target="_blank" class="inside-card shadow-hover">
+            <div class="inside-card-img" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800');"></div>
+            <div class="inside-card-content">
+              <h4>Admission</h4>
+              <p>Amrita Vishwa Vidyapeetham, Amaravati offers UG Level Programs.</p>
+            </div>
+          </a>
+
+          <!-- Faculty Members Card -->
+          <a href="https://www.amrita.edu/campus/amaravati/faculty/" target="_blank" class="inside-card shadow-hover">
+            <div class="inside-card-img" style="background-image: url('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800');"></div>
+            <div class="inside-card-content">
+              <h4>Faculty Members</h4>
+              <p>Expert and experienced faculty members on the campus guide the students to achieve academic excellence through co-curricular activities such as technical projects, symposiums...</p>
+            </div>
+          </a>
+
+          <!-- Call for Research Proposals Card -->
+          <a href="https://www.amrita.edu/campus/amaravati/call-research-proposals/" target="_blank" class="inside-card shadow-hover">
+            <div class="inside-card-img" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800');"></div>
+            <div class="inside-card-content">
+              <h4>Call for Research Proposals</h4>
+              <p>Please click here to view the call for research proposals list.</p>
+            </div>
+          </a>
+
+          <!-- Central Library Card -->
+          <a href="library.html" class="inside-card shadow-hover">
+            <div class="inside-card-img" style="background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=800');"></div>
+            <div class="inside-card-content">
+              <h4>Central Library</h4>
+              <p>Amrita Vishwa Vidyapeetham, Amaravati central library supports the higher learning and research needs of the users.</p>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Collaborations & Leadership Banner Section -->
+      <section class="collaborations-section" id="inspiration">
+        <div class="collaborations-container">
+          <img src="assets/collaborations_leader.jpg" alt="Collaborations and Leadership Sri Mata Amritanandamayi Devi" class="collaborations-banner-img">
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 Campus Compass • Designed for Freshers at Amrita Amaravati. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+      <polyline points="18 15 12 9 6 15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Javascript Logic -->
+  <script src="app.js" type="module"></script>
+</body>
+
+</html>

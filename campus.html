@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus & Hostel Life at Amrita Amaravati — Freshers Guide 2026</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ----------------------------------------------------
+       DESIGN SYSTEM & CSS VARIABLES
+       ---------------------------------------------------- */
+    :root {
+      /* Palette */
+      --navy: #1a3a6b;
+      --med-blue: #2457a4;
+      --blue: #3b82f6;
+      --orange: #f97316;
+      --light-orange: #fb923c;
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --text-dark: #0f172a;
+      
+      --r: 20px;
+      --r-sm: 12px;
+      --shadow: 0 10px 30px rgba(36, 87, 164, 0.08);
+      --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    [data-theme="dark"] {
+      --navy: #0d0d1a;
+      --med-blue: #14142d;
+      --blue: #3b82f6;
+      --orange: #f97316;
+      --light-orange: #fb923c;
+      --white: #1a1a35;
+      --off-white: #0d0d1a;
+      --text-dark: #f4f6ff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Theme Toggle Switch */
+    .theme-toggle {
+      width: 44px;
+      height: 22px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border: none;
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      outline: none;
+    }
+
+    .toggle-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #ffffff;
+      position: absolute;
+      left: 3px;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html[data-theme="light"] .toggle-dot {
+      transform: translateX(0);
+    }
+    
+    html[data-theme="dark"] .toggle-dot {
+      transform: translateX(22px);
+    }
+
+    html[data-theme="dark"] .navbar {
+      background: rgba(13, 13, 26, 0.85);
+      border-bottom-color: rgba(59, 130, 246, 0.15);
+    }
+    html[data-theme="dark"] .mobile-menu {
+      background: rgba(13, 13, 26, 0.95);
+      border-bottom-color: rgba(59, 130, 246, 0.15);
+    }
+    html[data-theme="dark"] .nav-link {
+      color: #f4f6ff;
+    }
+    html[data-theme="dark"] .nav-link:hover,
+    html[data-theme="dark"] .nav-link.active {
+      color: var(--blue);
+    }
+    html[data-theme="dark"] .card,
+    html[data-theme="dark"] .timeline-item,
+    html[data-theme="dark"] .feature-card,
+    html[data-theme="dark"] .meal-card,
+    html[data-theme="dark"] .campus-card,
+    html[data-theme="dark"] .fac-card,
+    html[data-theme="dark"] .friend-card,
+    html[data-theme="dark"] .tip-card {
+      background: #1a1a35;
+      border-color: rgba(59, 130, 246, 0.15);
+      color: #f4f6ff;
+    }
+    html[data-theme="dark"] body {
+      background-color: var(--off-white);
+      color: #f4f6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--off-white);
+      color: #334155;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--off-white);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--navy);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--orange);
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Playfair Display', serif;
+      color: var(--navy);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Section Tag Badge Style */
+    .section-badge-wrap {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--orange);
+      border: 1px solid var(--orange);
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.05), rgba(251, 146, 60, 0.12));
+      padding: 6px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .section-title span {
+      color: var(--orange);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto 56px;
+      line-height: 1.7;
+    }
+
+    /* Card styling */
+    .premium-card {
+      background: var(--white);
+      border: 1px solid rgba(36, 87, 164, 0.1);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--light-orange);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 2px solid var(--white);
+      color: var(--white);
+    }
+
+    .btn-ghost:hover {
+      background: var(--white);
+      color: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    /* ----------------------------------------------------
+       STICKY NAVIGATION BAR
+       ---------------------------------------------------- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 68px;
+      z-index: 1000;
+      background: rgba(26, 58, 107, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      transition: var(--transition);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 6px;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--white);
+    }
+
+    .logo-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--orange);
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(249, 115, 22, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 50px;
+      transition: var(--transition);
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--orange);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 16px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background-color: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* Mobile dropdown nav */
+    .mobile-menu {
+      position: fixed;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      background: rgba(26, 58, 107, 0.98);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: none;
+      flex-direction: column;
+      padding: 20px;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu .nav-link {
+      width: 100%;
+      padding: 12px 18px;
+    }
+
+    /* ----------------------------------------------------
+       HERO SECTION WITH PARALLAX BLOBS
+       ---------------------------------------------------- */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 130px 5% 80px;
+      background: linear-gradient(135deg, #0f2352, #1a3a6b, #2457a4);
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    /* Parallax Blob Elements */
+    .parallax-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .blob-1 {
+      width: 380px;
+      height: 380px;
+      background: rgba(249, 115, 22, 0.18);
+      top: 10%;
+      right: -50px;
+    }
+
+    .blob-2 {
+      width: 320px;
+      height: 320px;
+      background: rgba(59, 130, 246, 0.18);
+      bottom: 10%;
+      left: -50px;
+    }
+
+    /* Overlay gradients */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent 60%),
+                  radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.03), transparent 60%);
+      z-index: -1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(249, 115, 22, 0.1);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+      color: var(--light-orange);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: fadeUp 0.8s ease 0s both;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 6.5vw, 4.4rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      animation: fadeUp 0.8s ease 0.1s both;
+    }
+
+    .hero-title span {
+      color: var(--orange);
+    }
+
+    .hero-desc {
+      font-size: clamp(0.98rem, 2vw, 1.15rem);
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      margin-bottom: 48px;
+      font-weight: 300;
+      animation: fadeUp 0.8s ease 0.2s both;
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      z-index: 2;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+
+    .scroll-line {
+      width: 2px;
+      height: 50px;
+      background: linear-gradient(180deg, var(--orange), transparent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scroll-line::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--white);
+      animation: scrollAnim 2s infinite ease-in-out;
+    }
+
+    @keyframes scrollAnim {
+      0% { transform: translateY(-100%); }
+      80%, 100% { transform: translateY(100%); }
+    }
+
+    .scroll-txt {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 2px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----------------------------------------------------
+       SCROLL REVEAL & COMMON SECTION SETTINGS
+       ---------------------------------------------------- */
+    section {
+      padding: 100px 0;
+      position: relative;
+      border-bottom: 1px solid rgba(36, 87, 164, 0.06);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ----------------------------------------------------
+       TIMELINE SECTION (id="day")
+       ---------------------------------------------------- */
+    .timeline-section {
+      background-color: var(--white);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 850px;
+      margin: 40px auto 0;
+      padding: 20px 0;
+    }
+
+    /* Central vertical line */
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      background: linear-gradient(180deg, var(--med-blue) 0%, var(--orange) 50%, var(--med-blue) 100%);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 50px;
+      position: relative;
+      width: 100%;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Central Dot */
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--med-blue), var(--blue));
+      border: 3px solid var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 15px rgba(36, 87, 164, 0.25);
+      z-index: 2;
+    }
+
+    .timeline-side {
+      text-align: right;
+      padding-top: 8px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-side {
+      grid-column: 2;
+      text-align: left;
+    }
+
+    .timeline-item:nth-child(even) .timeline-card {
+      grid-column: 1;
+    }
+
+    .timeline-card {
+      background: var(--white);
+      border: 1px solid rgba(36, 87, 164, 0.08);
+      background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+      border-radius: var(--r);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(36, 87, 164, 0.2);
+    }
+
+    .timeline-time {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--orange);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .timeline-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .timeline-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .timeline-list li {
+      font-size: 0.9rem;
+      color: #475569;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: bold;
+      font-size: 1.1rem;
+      top: -2px;
+    }
+
+    /* ----------------------------------------------------
+       HOSTEL SECTION (id="hostel")
+       ---------------------------------------------------- */
+    .hostel-section {
+      background: linear-gradient(180deg, #f8fafc, #eef4ff);
+    }
+
+    /* Intro Banner */
+    .intro-banner {
+      background: linear-gradient(135deg, #1a3a6b, #2457a4);
+      border-radius: var(--r);
+      padding: 40px;
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(26, 58, 107, 0.15);
+    }
+
+    .intro-emoji {
+      font-size: 4rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro-text h3 {
+      color: var(--white);
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .intro-text p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border: 1px solid rgba(36, 87, 164, 0.08);
+      border-radius: var(--r);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(36, 87, 164, 0.2);
+    }
+
+    .feature-icon-tile {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--r-sm);
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(36, 87, 164, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 0.88rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* ----------------------------------------------------
+       FOOD & MESS FACILITIES (id="food")
+       ---------------------------------------------------- */
+    .food-section {
+      background-color: var(--white);
+    }
+
+    /* Orange-tinted Intro Banner */
+    .food-intro-banner {
+      background: linear-gradient(135deg, #fff7ed, #fff3e0);
+      border: 1px solid rgba(249, 115, 22, 0.12);
+      border-radius: var(--r);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .food-intro-emoji {
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+
+    .food-intro-text h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .food-checklist {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .food-checklist li {
+      font-size: 0.9rem;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .food-checklist li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      background: rgba(16, 185, 129, 0.1);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+    }
+
+    .meals-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .meal-card {
+      background: var(--white);
+      border: 1px solid rgba(36, 87, 164, 0.08);
+      border-radius: var(--r);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .meal-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(36, 87, 164, 0.2);
+    }
+
+    .meal-emoji {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .meal-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .meal-card p {
+      font-size: 0.85rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* Dark Blue Double-Column Special Section */
+    .special-food-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      background: linear-gradient(135deg, #1a3a6b, #112547);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      color: var(--white);
+      box-shadow: 0 10px 35px rgba(26, 58, 107, 0.2);
+    }
+
+    .special-column h3 {
+      color: var(--white);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .special-column p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .special-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .special-tag {
+      background: rgba(249, 115, 22, 0.15);
+      border: 1px solid var(--orange);
+      color: var(--light-orange);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+    }
+
+    .exam-inner-card {
+      background: rgba(249, 115, 22, 0.08);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+      border-radius: var(--r-sm);
+      padding: 20px;
+    }
+
+    .exam-inner-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--light-orange);
+      font-size: 1.02rem;
+      margin-bottom: 6px;
+    }
+
+    .exam-inner-card p {
+      margin-bottom: 0;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* ----------------------------------------------------
+       CAMPUS ENVIRONMENT SECTION (id="campus")
+       ---------------------------------------------------- */
+    .campus-section {
+      background: linear-gradient(180deg, #eef4ff, #f8fafc);
+    }
+
+    .campus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .campus-card {
+      background: var(--white);
+      border: 1px solid rgba(36, 87, 164, 0.08);
+      border-radius: var(--r);
+      padding: 28px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .campus-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(36, 87, 164, 0.2);
+    }
+
+    .campus-card-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .campus-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .campus-card p {
+      font-size: 0.85rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* ----------------------------------------------------
+       FACILITIES SECTION (id="facilities")
+       ---------------------------------------------------- */
+    .facilities-section {
+      background-color: var(--white);
+    }
+
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+
+    /* Double-border gradient effect using padding-box + border-box */
+    .fac-card {
+      border: 3px solid transparent;
+      border-radius: 20px;
+      background: linear-gradient(var(--white), var(--white)) padding-box,
+                  linear-gradient(135deg, var(--navy), var(--orange)) border-box;
+      padding: 28px 20px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .fac-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 17px;
+      background: linear-gradient(135deg, rgba(26, 58, 107, 0.03), rgba(249, 115, 22, 0.03));
+      opacity: 0;
+      transition: var(--transition);
+      pointer-events: none;
+    }
+
+    .fac-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .fac-card:hover::before {
+      opacity: 1;
+    }
+
+    .fac-emoji {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .fac-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+
+    .fac-card p {
+      font-size: 0.82rem;
+      color: #64748b;
+      line-height: 1.45;
+    }
+
+    /* ----------------------------------------------------
+       FRIENDSHIPS SECTION (id="friends")
+       ---------------------------------------------------- */
+    .friends-section {
+      background: linear-gradient(135deg, #1a3a6b, #0d2347);
+      color: var(--white);
+    }
+
+    .friends-section h2 {
+      color: var(--white);
+    }
+
+    .friends-section .section-badge {
+      color: var(--light-orange);
+      border-color: var(--light-orange);
+      background: linear-gradient(135deg, rgba(251, 146, 60, 0.08), rgba(251, 146, 60, 0.15));
+    }
+
+    .friends-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    /* Glassmorphism Cards */
+    .friend-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: var(--r);
+      padding: 32px 28px;
+      transition: var(--transition);
+    }
+
+    .friend-card:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.35);
+      transform: translateY(-4px);
+    }
+
+    .friend-emoji {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .friend-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .friend-card p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* ----------------------------------------------------
+       SURVIVAL TIPS SECTION (id="tips")
+       ---------------------------------------------------- */
+    .tips-section {
+      background-color: #f8fafc;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .tip-card {
+      background: var(--white);
+      border: 1px solid rgba(36, 87, 164, 0.08);
+      border-left: 4px solid var(--orange);
+      border-radius: 4px var(--r) var(--r) 4px;
+      padding: 30px;
+      position: relative;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      overflow: hidden;
+    }
+
+    .tip-card:hover {
+      transform: translateX(4px);
+      border-color: rgba(36, 87, 164, 0.2);
+    }
+
+    .tip-num {
+      position: absolute;
+      top: -8px;
+      right: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      color: rgba(249, 115, 22, 0.15);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .tip-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--navy);
+      position: relative;
+      z-index: 1;
+    }
+
+    .tip-card p {
+      font-size: 0.86rem;
+      color: #64748b;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ----------------------------------------------------
+       FINAL CTA SECTION (id="cta")
+       ---------------------------------------------------- */
+    .cta-section {
+      background: linear-gradient(135deg, #0a1f47, #1a3a6b, #2457a4);
+      padding: 120px 5%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Orange radial glow overlay */
+    .cta-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .cta-content .section-badge {
+      color: var(--light-orange);
+      border-color: var(--light-orange);
+      background: linear-gradient(135deg, rgba(251, 146, 60, 0.08), rgba(251, 146, 60, 0.15));
+      margin-bottom: 20px;
+    }
+
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-desc {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    /* Quote Block */
+    .quote-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: var(--r);
+      padding: 24px 30px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ----------------------------------------------------
+       FOOTER
+       ---------------------------------------------------- */
+    .footer {
+      background: #080f1e;
+      padding: 40px 5%;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer p {
+      line-height: 1.6;
+    }
+
+    .footer span.heart {
+      color: var(--orange);
+      display: inline-block;
+      margin: 0 2px;
+      animation: pulseHeart 1.5s infinite;
+    }
+
+    @keyframes pulseHeart {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    /* ----------------------------------------------------
+       RESPONSIVE DESIGN (MEDIA QUERIES)
+       ---------------------------------------------------- */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 70px 0;
+      }
+
+      .timeline::before {
+        left: 30px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-left: 60px;
+        text-align: left !important;
+      }
+
+      .timeline-dot {
+        left: 30px;
+        transform: translateX(-50%);
+      }
+
+      .timeline-item:nth-child(even) .timeline-side {
+        text-align: left;
+      }
+
+      .timeline-item:nth-child(even) .timeline-card {
+        grid-column: 1;
+      }
+
+      .intro-banner {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .intro-emoji {
+        margin: 0 auto;
+      }
+
+      .food-intro-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .special-food-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="logo-container">
+      <span class="logo-text">Amrita Amaravati</span>
+      <span class="logo-dot"></span>
+    </a>
+    
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="academic.html" class="nav-link">Academic Life</a>
+      <a href="clubs.html" class="nav-link">Clubs & Activities</a>
+      <a href="campus.html" class="nav-link active">Campus Life</a>
+      <a href="survival.html" class="nav-link">Survival Kit</a>
+      <a href="resources.html" class="nav-link">Resources</a>
+    </nav>
+
+    <div class="nav-controls" style="display: flex; align-items: center; gap: 1rem; margin-left: auto; margin-right: 1.5rem;">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <span class="toggle-dot"></span>
+      </button>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="academic.html" class="nav-link">Academic Life</a>
+    <a href="clubs.html" class="nav-link">Clubs & Activities</a>
+    <a href="campus.html" class="nav-link active">Campus Life</a>
+    <a href="survival.html" class="nav-link">Survival Kit</a>
+    <a href="resources.html" class="nav-link">Resources</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="parallax-blob blob-1" id="blob1"></div>
+    <div class="parallax-blob blob-2" id="blob2"></div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">
+        🎓 Freshers' Guide 2026
+      </div>
+      <h1 class="hero-title">
+        🏫 Campus & <span>Hostel Life</span><br>at Amrita Amaravati
+      </h1>
+      <p class="hero-desc">
+        Experience a vibrant, comfortable, and memorable student life. From academics and friendships to hostel living and delicious meals — discover what everyday campus life truly looks like.
+      </p>
+    </div>
+
+    <!-- Scroll Down indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-txt">SCROLL</span>
+    </div>
+  </section>
+
+  <!-- Timeline Section (id="day") -->
+  <section id="day" class="timeline-section">
+    <div class="container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">🌅 Daily Routine</span>
+      </div>
+      <h2 class="section-title">📅 A Typical Day at <span>Amrita</span></h2>
+      <p class="section-subtitle">Every day on campus is a new adventure — here's what a typical day looks like for a fresher.</p>
+
+      <div class="timeline">
+        <!-- Card 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">🌅</div>
+          <div class="timeline-side">
+            <div class="timeline-card">
+              <span class="timeline-time">Morning · 6:00 – 9:00 AM</span>
+              <h3>Starting the Day</h3>
+              <ul class="timeline-list">
+                <li>Wake up in the hostel, fresh and ready</li>
+                <li>Morning freshen up & personal time</li>
+                <li>Head to the dining hall for breakfast</li>
+                <li>Grab your bag and walk to class</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">📖</div>
+          <div class="timeline-side">
+            <div class="timeline-card">
+              <span class="timeline-time">Academic Hours · 9:00 AM – 5:00 PM</span>
+              <h3>Core Lectures & Labs</h3>
+              <ul class="timeline-list">
+                <li>Attend scheduled lectures and tutorials</li>
+                <li>Hands-on laboratory sessions</li>
+                <li>Lunch break at the hostel mess</li>
+                <li>Group discussions, presentations & project work</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">🍛</div>
+          <div class="timeline-side">
+            <div class="timeline-card">
+              <span class="timeline-time">Evening · 5:00 – 7:00 PM</span>
+              <h3>☀️ Wind After Classes</h3>
+              <ul class="timeline-list">
+                <li>Head back to the hostel and freshen up</li>
+                <li>Relax with hostel friends</li>
+                <li>Library visits or self-study time</li>
+                <li>Work on assignments or college tasks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">🌙</div>
+          <div class="timeline-side">
+            <div class="timeline-card">
+              <span class="timeline-time">Night · 7:00 PM – 11:00 PM</span>
+              <h3>Rest & Recovery</h3>
+              <ul class="timeline-list">
+                <li>Dinner at the hostel mess</li>
+                <li>Focused study and revision sessions</li>
+                <li>Socialise with hostel friends</li>
+                <li>Prepare for the next day & rest well</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Hostel Section (id="hostel") -->
+  <section id="hostel" class="hostel-section">
+    <div class="container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">🏠 Accommodation</span>
+      </div>
+      <h2 class="section-title">Your Hostel <span>Experience</span></h2>
+      <p class="section-subtitle">Comfortable, clean, and collaborative residential structures built to nurture a home away from home.</p>
+
+      <!-- Intro Banner -->
+      <div class="intro-banner reveal">
+        <div class="intro-emoji">🏢</div>
+        <div class="intro-text">
+          <h3>A Place That Feels Like Home</h3>
+          <p>Living inside residential campus blocks builds lasting friendships, provides peer tutoring sessions, and maintains safe environments under designated supervisors and wardens.</p>
+        </div>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="feature-grid">
+        <!-- Card 1 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-tile">🛏️</div>
+          <h4>Spacious Rooms</h4>
+          <p>Nicely ventilated rooms with study desks, bookshelves, individual closets, and power plugs.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-tile">📶</div>
+          <h4>High-Speed Wi-Fi</h4>
+          <p>Continuous secure internet access across rooms to code and study projects online.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-tile">📖</div>
+          <h4>Dedicated Study Areas</h4>
+          <p>Quiet study rooms situated on every residential floor to prep for midterms without noise.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-tile">👕</div>
+          <h4>Laundry Facilities</h4>
+          <p>Commercial laundry services available to wash, iron, and handle student garments regularly.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-tile">🎮</div>
+          <h4>Recreation Spaces</h4>
+          <p>Common lounges equipped with board games, table tennis tables, and television screens.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-tile">🔒</div>
+          <h4>24/7 Security</h4>
+          <p>Round-the-clock safety guards, biometric gates registers, and secure boundaries.</p>
+        </div>
+        <!-- Card 7 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-tile">✨</div>
+          <h4>Clean Environment</h4>
+          <p>Regular daily cleaning services in common corridors, washrooms, and surrounding corridors.</p>
+        </div>
+        <!-- Card 8 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon-tile">🤝</div>
+          <h4>Friendly Community</h4>
+          <p>Interactive peer circles that organize board game sessions, study circles, and outings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Section (id="food") -->
+  <section id="food" class="food-section">
+    <div class="container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">🍛 Dining</span>
+      </div>
+      <h2 class="section-title">Food & Mess <span>Facilities</span></h2>
+      <p class="section-subtitle">Hygienic, pure vegetarian kitchens offering balanced nutrition plans across standard meal times.</p>
+
+      <!-- Food Intro Banner -->
+      <div class="food-intro-banner reveal">
+        <div class="food-intro-emoji">🍽️</div>
+        <div class="food-intro-text">
+          <h3>Pure Vegetarian, Always Delicious</h3>
+          <p>Cooking guidelines follow strict sanitization procedures. Mess portals manage a balanced menu designed to maintain student energy.</p>
+          <ul class="food-checklist">
+            <li>100% Pure Vegetarian Dining</li>
+            <li>Breakfast, Lunch, Evening Snacks & Dinner</li>
+            <li>Hygienic Food Preparation Standards</li>
+            <li>Balanced and Nutritious Menu Variety</li>
+            <li>Clean, Comfortable Dining Environment</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meal Cards -->
+      <div class="meals-row">
+        <!-- Breakfast -->
+        <div class="meal-card reveal">
+          <span class="meal-emoji">🥞</span>
+          <h4>Breakfast</h4>
+          <p>South Indian options (Idli, Dosa, Poha) served with warm tea or coffee to jumpstart classes.</p>
+        </div>
+        <!-- Lunch -->
+        <div class="meal-card reveal">
+          <span class="meal-emoji">🍲</span>
+          <h4>Lunch</h4>
+          <p>Complete meals containing rice, dal, rasam, seasonal vegetable curries, and buttermilk.</p>
+        </div>
+        <!-- Snacks -->
+        <div class="meal-card reveal">
+          <span class="meal-emoji">🫖</span>
+          <h4>Evening Snacks</h4>
+          <p>Freshly brewed tea/coffee alongside pakoras, biscuits, or roasted peanuts after lectures.</p>
+        </div>
+        <!-- Dinner -->
+        <div class="meal-card reveal">
+          <span class="meal-emoji">🍛</span>
+          <h4>Dinner</h4>
+          <p>Light nutritious dinner including chapatis, paneer curries, pickles, curd, and salads.</p>
+        </div>
+      </div>
+
+      <!-- Double Column Special dinners section -->
+      <div class="special-food-grid reveal">
+        <!-- Left: Special Dinner -->
+        <div class="special-column">
+          <h3>🌟 The Special Dinner Tradition</h3>
+          <p>Once a week, the mess prepares a special dinner menu to break routine and offer students a festive dining experience.</p>
+          <div class="special-tags">
+            <span class="special-tag">🍦 Ice Cream</span>
+            <span class="special-tag">🍮 Sweet Dishes</span>
+            <span class="special-tag">🥮 Special Snacks</span>
+            <span class="special-tag">🎉 Festival Specials</span>
+          </div>
+        </div>
+
+        <!-- Right: Exam Support -->
+        <div class="special-column">
+          <h3>☕ Exam Support Tradition</h3>
+          <p>During midterm and end-semester examinations, the mess provides late-night tea and nutritional support to help students stay alert.</p>
+          <div class="exam-inner-card">
+            <h4>🧠 Exam Period Special</h4>
+            <p>Hot ginger tea and light healthy cookies are served near study areas during late-night hours to ease academic stress.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Environment Section (id="campus") -->
+  <section id="campus" class="campus-section">
+    <div class="container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">🌿 Environment</span>
+      </div>
+      <h2 class="section-title">The Campus <span>Atmosphere</span></h2>
+      <p class="section-subtitle">Explore a lush green 100-acre environment equipped with cutting-edge spaces built to inspire.</p>
+
+      <div class="campus-grid">
+        <!-- Card 1 -->
+        <div class="campus-card reveal">
+          <span class="campus-card-emoji">🌳</span>
+          <h4>Green Spaces</h4>
+          <p>Meticulously styled gardens and shaded sit-outs that provide relaxation points between sessions.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="campus-card reveal">
+          <span class="campus-card-emoji">🏛️</span>
+          <h4>Modern Infrastructure</h4>
+          <p>Designed classrooms, lecture halls, and structural complexes fitting global standards.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="campus-card reveal">
+          <span class="campus-card-emoji">🎓</span>
+          <h4>Academic Buildings</h4>
+          <p>State-of-the-art departments housing labs, faculty rooms, and team project facilities.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="campus-card reveal">
+          <span class="campus-card-emoji">💡</span>
+          <h4>Innovation Centers</h4>
+          <p>Equipped workstations helping students design research systems and develop startups.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="campus-card reveal">
+          <span class="campus-card-emoji">🎭</span>
+          <h4>Student Activity Areas</h4>
+          <p>Central courtyards hosting cultural workshops, open-mic programs, and tech events.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="campus-card reveal">
+          <span class="campus-card-emoji">🏅</span>
+          <h4>Sports Facilities</h4>
+          <p>Equipped cricket pitches, football grounds, indoor badminton halls, and tracking lanes.</p>
+        </div>
+        <!-- Card 7 -->
+        <div class="campus-card reveal">
+          <span class="campus-card-emoji">🚶</span>
+          <h4>Walking Paths</h4>
+          <p>Clean pedestrian walking pathways linking hostel gates to central department zones.</p>
+        </div>
+        <!-- Card 8 -->
+        <div class="campus-card reveal">
+          <span class="campus-card-emoji">📚</span>
+          <h4>Study-Friendly Spaces</h4>
+          <p>Quiet zones and reading halls configured to brainstorm project codes comfortably.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities Section (id="facilities") -->
+  <section id="facilities" class="facilities-section">
+    <div class="container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">⭐ Amenities</span>
+      </div>
+      <h2 class="section-title">Student <span>Facilities</span></h2>
+      <p class="section-subtitle">Everything you need to support your academic progress and personal development is available on campus.</p>
+
+      <div class="facilities-grid">
+        <!-- Fac 1 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">📚</span>
+          <h4>Library</h4>
+          <p>Houses thousands of tech manuals, journals, and digital reference databases.</p>
+        </div>
+        <!-- Fac 2 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">💻</span>
+          <h4>Computer Labs</h4>
+          <p>Workstations equipped with compiler nodes and computing directories.</p>
+        </div>
+        <!-- Fac 3 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">🏟️</span>
+          <h4>Sports Grounds</h4>
+          <p>Open playgrounds configured for football, cricket, and field athletics.</p>
+        </div>
+        <!-- Fac 4 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">📡</span>
+          <h4>Campus Wi-Fi</h4>
+          <p>High-speed secure connection available across all academic complexes.</p>
+        </div>
+        <!-- Fac 5 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">🏥</span>
+          <h4>Medical Support</h4>
+          <p>On-campus clinic providing checkups, first-aid tools, and ambulance help.</p>
+        </div>
+        <!-- Fac 6 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">☕</span>
+          <h4>Cafeteria</h4>
+          <p>Dining kiosks offering quick snacks, tea, fruit juices, and cookies.</p>
+        </div>
+        <!-- Fac 7 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">🪑</span>
+          <h4>Study Spaces</h4>
+          <p>Comfortable tables optimized for individual revisions and group work.</p>
+        </div>
+        <!-- Fac 8 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">🚌</span>
+          <h4>Transportation</h4>
+          <p>Shuttle transit routes linking campus gates to nearby transport hubs.</p>
+        </div>
+        <!-- Fac 9 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">🎤</span>
+          <h4>Event Venues</h4>
+          <p>Air-conditioned auditoriums hosting tech talks and cultural sessions.</p>
+        </div>
+        <!-- Fac 10 -->
+        <div class="fac-card reveal">
+          <span class="fac-emoji">🙋</span>
+          <h4>Student Support</h4>
+          <p>Designated advisory offices to guide you through hostel allocations and queries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Friendships Section (id="friends") -->
+  <section id="friends" class="friends-section">
+    <div class="container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">👥 Community</span>
+      </div>
+      <h2 class="section-title">Life Beyond <span>Academics</span></h2>
+      <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.7);">College is about networking as much as grades. Build circles that expand your views.</p>
+
+      <div class="friends-grid">
+        <!-- Card 1 -->
+        <div class="friend-card reveal">
+          <span class="friend-emoji">🗺️</span>
+          <h4>Meet Students from Every State</h4>
+          <p>Amrita Amaravati attracts young minds from all over India, helping you build a diverse network.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="friend-card reveal">
+          <span class="friend-emoji">🌏</span>
+          <h4>Learn New Cultures</h4>
+          <p>Share traditional foods, regional festivals, and distinct views with your roommates.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="friend-card reveal">
+          <span class="friend-emoji">🤝</span>
+          <h4>Build Lifelong Friendships</h4>
+          <p>Bond over late-night study sessions, shared dinners, and tech projects.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="friend-card reveal">
+          <span class="friend-emoji">💡</span>
+          <h4>Collaborate on Projects</h4>
+          <p>Form dynamic study circles to tackle complex coding, design tasks, and hackathons.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="friend-card reveal">
+          <span class="friend-emoji">🎊</span>
+          <h4>Participate in Events</h4>
+          <p>Work with peers to orchestrate cultural festivals, coding meets, and competitive sports leagues.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="friend-card reveal">
+          <span class="friend-emoji">🌟</span>
+          <h4>Grow as a Person</h4>
+          <p>Build essential soft skills, expand empathy levels, and evolve into a confident B.Tech student.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips Section (id="tips") -->
+  <section id="tips" class="tips-section">
+    <div class="container">
+      <div class="section-badge-wrap">
+        <span class="section-badge">🎯 Advice</span>
+      </div>
+      <h2 class="section-title">Freshers' <span>Survival Tips</span></h2>
+      <p class="section-subtitle">A collection of survival advice compiled by senior ranks to guide you through your first semester.</p>
+
+      <div class="tips-grid">
+        <!-- Tip 1 -->
+        <div class="tip-card reveal">
+          <span class="tip-num">01</span>
+          <h4>Manage Your Time Wisely</h4>
+          <p>Balance classes, labs, and personal study loops. Leverage tools like Notion or calendars to log deadlines early.</p>
+        </div>
+        <!-- Tip 2 -->
+        <div class="tip-card reveal">
+          <span class="tip-num">02</span>
+          <h4>Stay Organised</h4>
+          <p>Keep your hostel room clean, stack textbooks neatly, and back up code assignments to secure digital folders.</p>
+        </div>
+        <!-- Tip 3 -->
+        <div class="tip-card reveal">
+          <span class="tip-num">03</span>
+          <h4>Participate Actively</h4>
+          <p>Onboard into technical and creative clubs early. Active contributions build leadership skills beyond books.</p>
+        </div>
+        <!-- Tip 4 -->
+        <div class="tip-card reveal">
+          <span class="tip-num">04</span>
+          <h4>Maintain Good Attendance</h4>
+          <p>Attend lectures regularly. Keeping your attendance above the mandatory 75% baseline protects exam status.</p>
+        </div>
+        <!-- Tip 5 -->
+        <div class="tip-card reveal">
+          <span class="tip-num">05</span>
+          <h4>Take Care of Your Health</h4>
+          <p>Eat healthy meals at the hostel mess, stay hydrated, and target 7-8 hours of sleep to keep cognitive focus high.</p>
+        </div>
+        <!-- Tip 6 -->
+        <div class="tip-card reveal">
+          <span class="tip-num">06</span>
+          <h4>Make New Friends Early</h4>
+          <p>Connect with campus peers and hostel roommates. A strong study and peer circle makes university feel like home.</p>
+        </div>
+        <!-- Tip 7 -->
+        <div class="tip-card reveal">
+          <span class="tip-num">07</span>
+          <h4>Use Campus Resources</h4>
+          <p>Consult library directories, utilize lab hours, and schedule consultations with faculty advisors for help.</p>
+        </div>
+        <!-- Tip 8 -->
+        <div class="tip-card reveal">
+          <span class="tip-num">08</span>
+          <h4>Enjoy Every Moment</h4>
+          <p>B.Tech is academically demanding, but the campus memories, friendships, and projects are what you will cherish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section (id="cta") -->
+  <section id="cta" class="cta-section">
+    <div class="cta-content">
+      <div class="section-badge-wrap">
+        <span class="section-badge">🚀 Welcome to Amrita</span>
+      </div>
+      <h2 class="cta-title">Welcome to Your New Home</h2>
+      <p class="cta-desc">
+        Your engineering journey is full of growth, friendships, and project successes. Explore, learn, innovate, and make every day count at Amrita Amaravati.
+      </p>
+      <div class="quote-card reveal">
+        "The hostel becomes your second home, and the friends you make become your second family."
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>🏫 Amrita School of Engineering, Amaravati · Campus Life Guide for Freshers 2026 · Made with <span class="heart">♥</span> for new students</p>
+  </footer>
+
+  <!-- Page Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // --- Theme Toggle Logic ---
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlElement = document.documentElement;
+      
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      htmlElement.setAttribute('data-theme', savedTheme);
+      
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = htmlElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          htmlElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      // --- Mobile Dropdown Navigation Toggle ---
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+
+      // Close mobile dropdown when a link is clicked
+      document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+        });
+      });
+
+      // --- Parallax Blobs Scroll Shift ---
+      const blob1 = document.getElementById('blob1');
+      const blob2 = document.getElementById('blob2');
+
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        
+        // Parallax scroll calculations
+        blob1.style.transform = `translateY(${y * 0.12}px)`;
+        blob2.style.transform = `translateY(${y * -0.08}px)`;
+      });
+
+      // --- IntersectionObserver Scroll Reveal ---
+      const revealElements = document.querySelectorAll('.reveal');
+      
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            
+            // Stagger delays for child cards
+            const cards = entry.target.querySelectorAll('.timeline-item, .feature-card, .meal-card, .campus-card, .fac-card, .friend-card, .tip-card');
+            cards.forEach((card, idx) => {
+              const delayMs = (idx % 4) * 80;
+              card.style.transitionDelay = `${delayMs / 1000}s`;
+              card.style.opacity = '1';
+              card.style.transform = 'none';
+              
+              // Clear inline transform after transition to allow hover animations to work
+              setTimeout(() => {
+                card.style.transform = '';
+              }, delayMs + 850);
+            });
+            
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.01,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => {
+        // Initialize child cards to start slightly offset
+        const childCards = el.querySelectorAll('.timeline-item, .feature-card, .meal-card, .campus-card, .fac-card, .friend-card, .tip-card');
+        childCards.forEach(c => {
+          c.style.opacity = '0';
+          c.style.transition = 'opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
+          if (c.classList.contains('fac-card')) {
+            c.style.transform = 'scale(0.95)';
+          } else if (c.classList.contains('tip-card')) {
+            c.style.transform = 'translateX(-20px)';
+          } else {
+            c.style.transform = 'translateY(20px)';
+          }
+        });
+        revealObserver.observe(el);
+      });
+
+      // --- Active Navigation Link Observer ---
+      const navLinks = document.querySelectorAll('.navbar .nav-link');
+      const sections = document.querySelectorAll('section[id]');
+
+      window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        
+        sections.forEach(sec => {
+          const top = sec.offsetTop - 120;
+          if (window.scrollY >= top) {
+            currentSectionId = sec.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
