@@ -4,7 +4,7 @@
   "description": "Premium onboarding homepage and image slider for Campus Compass 2026",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node build.js",
     "preview": "vite preview"
   },
   "devDependencies": {
